@@ -24,7 +24,7 @@ export const Button = ({
       type="button"
       onClick={props.onClick}
       className={cn(
-        'first-letter:uppercase transition-colors flex items-center gap-2',
+        'transition-colors flex items-center gap-2',
         props.className,
         {
           'px-3 py-2 rounded-lg': size === 'base',
@@ -39,8 +39,8 @@ export const Button = ({
         }
       )}
     >
-      <span className="text-xl">{props.icon}</span>
-      {props.label}
+      {props.icon && <span className="text-xl">{props.icon}</span>}
+      <span className="first-letter:capitalize">{props.label}</span>
     </button>
   );
 };
