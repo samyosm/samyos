@@ -21,9 +21,9 @@ export const HeaderItem = (props: HeaderItemProps) => {
         href={props.href}
         type="button"
         className={cn(
-          'first-letter:uppercase transition-colors flex items-center gap-2 p-5 rounded-2xl text-gray-500 hover:bg-secondary-500 hover:text-secondary-text active:bg-secondary-400',
+          'first-letter:uppercase transition-colors flex items-center gap-2 px-5 py-3 rounded-2xl text-gray-500 hover:bg-secondary-400 hover:text-secondary-text active:bg-secondary-300',
           {
-            'bg-secondary-500 text-secondary-text': path.endsWith(props.href),
+            'bg-secondary-400 text-secondary-text': path.endsWith(props.href),
           }
         )}
       >

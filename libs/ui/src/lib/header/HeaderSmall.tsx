@@ -1,28 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Samyos } from '../logos/Samyos';
 import { HeaderProps } from './Header';
 import { HeaderItem } from './HeaderItem';
 import cn from 'classnames';
 import { MdMenu as Menu, MdClose as Close } from 'react-icons/md';
 import { Button } from '../button/Button';
-
-const useScroll = () => {
-  const [top, setTop] = useState(true);
-
-  useEffect(() => {
-    const scrollHandler = () => {
-      window.scrollY > 0 ? setTop(false) : setTop(true);
-    };
-    window.addEventListener('scroll', scrollHandler);
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, [top]);
-  return top;
-};
+import { useScrollTopDetector } from '@samyos/hooks';
 
 /**
  * This is a header for devices with a small width; e.g. phones */
 export const HeaderSmall = (props: HeaderProps) => {
-  const isAtTop = useScroll();
+  const isAtTop = useScrollTopDetector();
   const [open, setOpen] = useState(true);
 
   return (

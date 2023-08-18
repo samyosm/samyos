@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement } from 'react';
 
 export interface ButtonProps {
   /** Note: The first letter will get capitalized*/
