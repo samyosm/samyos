@@ -9,7 +9,7 @@ export interface HeaderItemProps {
   /** Note: This will get capitalized */
   label: string;
   href: string;
-  icon: ReactElement;
+  icon?: ReactElement;
 }
 
 // TODO: Add hrefLang
@@ -27,7 +27,7 @@ export const HeaderItem = (props: HeaderItemProps) => {
           }
         )}
       >
-        <span className="text-xl">{props.icon}</span>
+        {props.icon && <span className="text-xl">{props.icon}</span>}
         {props.label}
       </Link>
     </li>
