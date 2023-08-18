@@ -36,10 +36,7 @@ export const HeaderSmall = (props: HeaderProps) => {
       >
         <div
           className={cn(
-            'bg-white/90 p-5 flex items-center justify-between border-b',
-            {
-              'shadow-sm shadow-gray-200': !isAtTop,
-            }
+            'bg-white/90 p-5 flex items-center justify-between border-b'
           )}
         >
           <Samyos />
