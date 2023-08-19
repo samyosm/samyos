@@ -1,15 +1,6 @@
 import { Sidebar } from '../../components/sidebar/Sidebar';
-import '../global.css';
 
-import { Inter } from 'next/font/google';
 import { Metadata } from 'next';
-
-// If loading a variable font, you don't need to specify the font weight
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-});
-
 export interface App {
   name: string;
   slug: string;
@@ -28,7 +19,7 @@ export async function generateMetadata({
   };
 }
 
-export default function RootLayout({
+export default function Layout({
   children,
   params,
 }: {
@@ -38,11 +29,9 @@ export default function RootLayout({
   };
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="flex">
-        <Sidebar app={params.app} />
-        <main className="w-full h-full">{children}</main>
-      </body>
-    </html>
+    <div className="flex">
+      <Sidebar app={params.app} />
+      <main className="w-full h-full">{children}</main>
+    </div>
   );
 }
