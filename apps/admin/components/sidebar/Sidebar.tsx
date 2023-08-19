@@ -24,9 +24,9 @@ export function Sidebar(props: SidebarProps) {
   };
 
   return (
-    <aside className="w-full max-w-xs">
-      <div className="flex justify-between">
-        <h1 className="text-center p-5 font-bold uppercase text-secondary-500">
+    <aside className="w-full max-w-xs flex flex-col bg-white">
+      <div className="flex justify-between border-b border-secondary-300">
+        <h1 className="text-center p-5 font-semibold uppercase text-secondary-300">
           Admin
         </h1>
 
@@ -41,9 +41,6 @@ export function Sidebar(props: SidebarProps) {
           ))}
         </select>
       </div>
-
-      <hr className="border-secondary-300 border-2" />
-
       <nav>
         <ul className="flex flex-col gap-2 p-5">
           {items.map((item) => (
@@ -54,5 +51,3 @@ export function Sidebar(props: SidebarProps) {
     </aside>
   );
 }
-
-export default Sidebar;
