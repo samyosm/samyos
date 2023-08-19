@@ -4,6 +4,8 @@ import '../global.css';
 import { Inter } from 'next/font/google';
 import { Metadata } from 'next';
 
+export const runtime = 'edge';
+
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
   subsets: ['latin'],
