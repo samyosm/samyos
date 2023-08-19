@@ -40,7 +40,9 @@ export const Button = ({
       )}
     >
       {props.icon && <span className="text-xl">{props.icon}</span>}
-      <span className="first-letter:capitalize">{props.label}</span>
+      {props.label && (
+        <span className="first-letter:capitalize">{props.label}</span>
+      )}
     </button>
   );
 };
