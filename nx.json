@@ -11,7 +11,7 @@
           "e2e",
           "build-storybook"
         ],
-        "accessToken": "NGJlNTIzZTUtMWVlNi00ZjI1LTllYTQtZThmNThhMGYzMjBhfHJlYWQtd3JpdGU="
+        "accessToken": "YjEwMjI5NGEtYTljNS00NDQwLWI0ZjktMzY2ZDcyZDY5ZWNhfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -23,15 +23,15 @@
     "test": {
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
     },
+    "e2e": {
+      "inputs": ["default", "^production"]
+    },
     "lint": {
       "inputs": [
         "default",
         "{workspaceRoot}/.eslintrc.json",
         "{workspaceRoot}/.eslintignore"
       ]
-    },
-    "e2e": {
-      "inputs": ["default", "^production"]
     },
     "build-storybook": {
       "inputs": [
@@ -63,7 +63,9 @@
       "application": {
         "babel": true
       },
-      "library": {}
+      "library": {
+        "unitTestRunner": "jest"
+      }
     },
     "@nx/next": {
       "application": {

@@ -15,10 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@samyos/hooks": ["libs/hooks/src/index.ts"],
-      "@samyos/hooks/server": ["libs/hooks/src/server.ts"],
-      "@samyos/ui": ["libs/ui/src/index.ts"],
-      "@samyos/ui/server": ["libs/ui/src/server.ts"]
+      "@samyos/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@samyos/shared/ui/server": ["libs/shared/ui/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
