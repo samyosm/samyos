@@ -1,14 +1,11 @@
 import cn from 'classnames';
 import { memo } from 'react';
 import { IconBaseProps } from 'react-icons';
+import { SkeletonButton } from './SkeletonButton';
+import { WithIcons } from '../withIcons/WithIcons';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /**
-   * Controls what's display in the button's title
-   *
-   * _Note_: The very first letter is capitalized
-   */
   children: React.ReactNode;
 
   variant?: 'primary' | 'secondary' | 'tetiary';
@@ -16,6 +13,8 @@ export interface ButtonProps
 
   LeftIcon?: React.ComponentType<IconBaseProps>;
   RightIcon?: React.ComponentType<IconBaseProps>;
+
+  loading?: boolean;
 }
 
 /** Used for actions that do something. */
@@ -27,12 +26,28 @@ export const Button = memo(
     size = 'base',
     LeftIcon,
     RightIcon,
+    loading = false,
     ...props
   }: ButtonProps) => {
+    if (loading) {
+      return (
+        <SkeletonButton
+          size={size}
+          label={
+            <WithIcons
+              LeftIcon={LeftIcon}
+              RightIcon={RightIcon}
+              children={children}
+            />
+          }
+        />
+      );
+    }
+
     return (
       <button
         className={cn(
-          'rounded-lg border focus:ring focus:ring-secondary-300 flex items-center gap-1',
+          'rounded-lg border focus:ring focus:ring-secondary-300',
           className,
           {
             'bg-secondary-500 border-secondary-500 text-secondary-text hover:bg-secondary-600 active:bg-secondary-500':
@@ -49,9 +64,11 @@ export const Button = memo(
         )}
         {...props}
       >
-        {LeftIcon && <LeftIcon className="opacity-90" />}
-        <span className="first-letter:uppercase">{children}</span>
-        {RightIcon && <RightIcon className="opacity-90" />}
+        <WithIcons
+          LeftIcon={LeftIcon}
+          RightIcon={RightIcon}
+          children={children}
+        />
       </button>
     );
   }

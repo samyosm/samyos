@@ -7,3 +7,9 @@
 * {
   font-family: 'Inter', sans-serif;
 }
+
+@layer utilities {
+  .skeleton {
+    @apply border-slate-200/90 border bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 text-transparent;
+  }
+}

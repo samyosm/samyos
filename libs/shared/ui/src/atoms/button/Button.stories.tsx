@@ -39,6 +39,7 @@ export const Tetiary = {
   } satisfies ButtonProps,
 };
 
+
 export const WithIcons = {
   args: {
     children: 'Label',
@@ -56,6 +57,16 @@ export const Small = {
     variant: 'primary',
     size: 'small',
     RightIcon: Icon,
+  } satisfies ButtonProps,
+};
+
+/** To be used inside a small component. */
+export const Loading = {
+  args: {
+    children: 'Label',
+    variant: 'primary',
+    RightIcon: Icon,
+    loading: true,
   } satisfies ButtonProps,
 };
 

@@ -1,11 +1,15 @@
 import { IconBaseProps } from 'react-icons';
+import { WithIcons } from '../withIcons/WithIcons';
+import { SkeletonBadge } from './SkeletonBadge';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  children: React.ReactNode;
   variant: 'success' | 'error' | 'info';
 
+  children: React.ReactNode;
   LeftIcon?: React.ComponentType<IconBaseProps>;
   RightIcon?: React.ComponentType<IconBaseProps>;
+
+  loading?: boolean;
 }
 
 /** To represent tags or other important informations. */
@@ -16,6 +20,9 @@ export const Badge = ({
 
   LeftIcon,
   RightIcon,
+
+  loading = false,
+
   ...props
 }: BadgeProps) => {
   const colorVariants = {
@@ -24,14 +31,27 @@ export const Badge = ({
     info: 'bg-secondary-50 text-secondary-700 ring-secondary-700/10',
   };
 
+  if (loading) {
+    return (
+      <SkeletonBadge
+        label={
+          <WithIcons
+            LeftIcon={LeftIcon}
+            RightIcon={RightIcon}
+            children={children}
+          />
+        }
+      />
+    );
+  }
   return (
     <p
-      className={`rounded-md text-xs font-medium ring-1 ring-inset px-2 py-1 w-fit ${colorVariants[variant]} flex items-center gap-1`}
+      className={`rounded-md text-xs font-medium ring-1 ring-inset px-2 py-1 w-fit ${colorVariants[variant]}`}
       {...props}
     >
-      {LeftIcon && <LeftIcon />}
-      {children}
-      {RightIcon && <RightIcon />}
+      <WithIcons LeftIcon={LeftIcon} RightIcon={RightIcon}>
+        {children}
+      </WithIcons>
     </p>
   );
 };
