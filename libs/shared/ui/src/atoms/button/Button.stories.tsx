@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react';
-import { Button, ButtonProps } from './Button';
+import { Button } from './Button';
 import { IoCompass as Icon } from "react-icons/io5";
 
 export default {

@@ -1,15 +1,13 @@
 import type { Meta } from '@storybook/react';
-import { Text } from './Text';
+import { SkeletonText } from './SkeletonText';
 
 export default {
-  component: Text,
+  component: SkeletonText,
   tags: ['autodocs'],
   args: {
-    children: 'Dream big and dare to fail.',
-    variant: 'organism',
-    loading: false,
+    children: 'Dream big and dare to fail.'
   }
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof SkeletonText>;
 
 
 /** To be used for big title pages.
@@ -18,7 +16,7 @@ export default {
 export const Page = {
   args: {
     variant: 'page',
-  },
+  }
 };
 
 /** To be used for sections in a page. */
@@ -42,14 +40,6 @@ export const Unemphasized = {
     variant: 'unemphasized',
   },
 };
-
-/** To be used for unloaded text. */
-export const Loading = {
-  args: {
-    loading: true,
-  },
-};
-
 
 
 

@@ -1,27 +1,22 @@
 import cn from 'classnames';
-import { SkeletonText } from './SkeletonText';
 
-export interface TextProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface SkeletonTextProps
+  extends React.HTMLAttributes<HTMLSpanElement> {
   children: React.ReactNode;
 
   variant?: 'page' | 'section' | 'organism' | 'unemphasized';
-  loading?: boolean;
 }
 
 /** An atom for ensuring good text hierarchy. */
-export const Text = ({
+export const SkeletonText = ({
   children,
   variant = 'section',
-  loading = false,
   ...props
-}: TextProps) => {
-  if (loading) {
-    return <SkeletonText children={children} variant={variant} {...props} />;
-  }
+}: SkeletonTextProps) => {
   return (
     <span
       {...props}
-      className={cn('first-letter:uppercase', {
+      className={cn('rounded-full skeleton', {
         'font-bold text-2xl uppercase': variant === 'page',
         'text-lg font-bold': variant === 'section',
         'font-medium': variant === 'organism',

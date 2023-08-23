@@ -10,6 +10,7 @@
 
 @layer utilities {
   .skeleton {
-    @apply border-slate-200/90 border bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 text-transparent;
+    /* TODO: I'm afraid hidding text like this will hinder SEO */
+    @apply border-slate-200/90 border bg-gradient-to-r from-slate-200/90 via-slate-300/90 to-slate-200/90 text-transparent animate-pulse;
   }
 }
