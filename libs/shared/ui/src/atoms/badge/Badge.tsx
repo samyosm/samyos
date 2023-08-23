@@ -49,7 +49,7 @@ export const Badge = ({
       className={`rounded-md text-xs font-medium ring-1 ring-inset px-2 py-1 w-fit ${colorVariants[variant]}`}
       {...props}
     >
-      <WithIcons LeftIcon={LeftIcon} RightIcon={RightIcon}>
+      <WithIcons LeftIcon={LeftIcon} RightIcon={RightIcon} iconSize="small">
         {children}
       </WithIcons>
     </p>

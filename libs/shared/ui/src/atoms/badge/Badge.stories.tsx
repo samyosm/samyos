@@ -1,44 +1,47 @@
 import type { Meta } from '@storybook/react';
-import { Badge, BadgeProps } from './Badge';
-import { GoDotFill as Icon } from 'react-icons/go';
+import { Badge } from './Badge';
+import { FaCircleDot as Icon } from 'react-icons/fa6';
 
 export default {
   component: Badge,
   argTypes: { onClick: {} },
   tags: ['autodocs'],
-} satisfies Meta<typeof Badge>;
-
-export const Info = {
-  args: {
-    children: 'label',
-    variant: 'info',
-    LeftIcon: Icon
-  } satisfies BadgeProps,
-};
-
-export const Error = {
-  args: {
-    children: 'label',
-    variant: 'error',
-    LeftIcon: Icon
-  } satisfies BadgeProps,
-};
-
-export const Success = {
-  args: {
-    children: 'label',
-    variant: 'success',
-    LeftIcon: Icon
-  } satisfies BadgeProps,
-};
-
-export const WithIcon = {
   args: {
     children: 'label',
     variant: 'info',
     LeftIcon: Icon,
+    loading: false,
+  }
+} satisfies Meta<typeof Badge>;
+
+export const Info = {
+  args: {}
+};
+
+export const Error = {
+  args: {
+    variant: 'error',
+  },
+};
+
+export const Success = {
+  args: {
+    variant: 'success',
+  },
+};
+
+export const WithIcon = {
+  args: {
+    LeftIcon: Icon,
     RightIcon: Icon
-  } satisfies BadgeProps,
+  },
+};
+
+
+export const Loading = {
+  args: {
+    loading: true
+  },
 };
 
 

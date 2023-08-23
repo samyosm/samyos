@@ -68,6 +68,7 @@ export const Button = memo(
           LeftIcon={LeftIcon}
           RightIcon={RightIcon}
           children={children}
+          iconSize={size}
         />
       </button>
     );
