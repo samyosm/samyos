@@ -1,5 +1,5 @@
 import { IconBaseProps } from 'react-icons';
-import { WithIcons } from '../withIcons/WithIcons';
+import { WithIcons } from '../../layouts/withIcons/WithIcons';
 import { SkeletonBadge } from './SkeletonBadge';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {

@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { memo } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { SkeletonButton } from './SkeletonButton';
-import { WithIcons } from '../withIcons/WithIcons';
+import { WithIcons } from '../../layouts/withIcons/WithIcons';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

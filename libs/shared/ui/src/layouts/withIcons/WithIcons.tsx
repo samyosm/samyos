@@ -13,10 +13,10 @@ export const WithIcons = ({
   RightIcon,
 }: WithIconsProps) => {
   return (
-    <div className="flex gap-1 items-center">
+    <span className="flex gap-1 items-center">
       {LeftIcon && <LeftIcon className="opacity-90" />}
       {children}
       {RightIcon && <RightIcon className="opacity-90" />}
-    </div>
+    </span>
   );
 };
