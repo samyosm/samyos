@@ -1,0 +1,7 @@
+{
+  "Index": {
+    "title": "Bonjour, {name}!",
+    "birth": "C'est votre {year, selectordinal, one {#er} other {#iéme}} anniversaire.",
+    "cta": "Commencer votre project"
+  }
+}

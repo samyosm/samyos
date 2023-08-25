@@ -1,0 +1,7 @@
+{
+  "Index": {
+    "title": "Hello, {name}!",
+    "birth": "It's your {year, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} birthday!",
+    "cta": "Start your project"
+  }
+}

@@ -6,13 +6,15 @@ export interface TextProps extends React.HTMLAttributes<HTMLSpanElement> {
 
   variant?: 'page' | 'section' | 'organism' | 'unemphasized';
   loading?: boolean;
+  className?: string;
 }
 
 /** An atom for ensuring good text hierarchy. */
 export const Text = ({
   children,
-  variant = 'section',
+  variant = 'organism',
   loading = false,
+  className,
   ...props
 }: TextProps) => {
   if (loading) {
@@ -21,8 +23,8 @@ export const Text = ({
   return (
     <span
       {...props}
-      className={cn('first-letter:uppercase', {
-        'font-bold text-2xl uppercase': variant === 'page',
+      className={cn('first-letter:uppercase', className, {
+        'font-bold text-4xl uppercase': variant === 'page',
         'text-lg font-bold': variant === 'section',
         'font-medium': variant === 'organism',
         'text-sm opacity-70': variant === 'unemphasized',
