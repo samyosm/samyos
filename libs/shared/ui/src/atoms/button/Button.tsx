@@ -1,76 +1,45 @@
-import cn from 'classnames';
-import { memo } from 'react';
-import { IconBaseProps } from 'react-icons';
-import { SkeletonButton } from './SkeletonButton';
-import { WithIcons } from '../../layouts/withIcons/WithIcons';
-
+import cn from 'clsx';
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-
-  variant?: 'primary' | 'secondary' | 'tetiary';
-  size?: 'small' | 'base';
-
-  LeftIcon?: React.ComponentType<IconBaseProps>;
-  RightIcon?: React.ComponentType<IconBaseProps>;
-
-  loading?: boolean;
+  size?: 'md' | 'sm';
+  variant?: 'plain' | 'solid' | 'outlined' | 'soft';
+  className?: string;
+  /** Preferablly, this should be a `<Text>` component.*/
+  children?: React.ReactNode;
 }
 
-/** Used for actions that do something. */
-export const Button = memo(
-  ({
-    children,
-    className,
-    variant = 'primary',
-    size = 'base',
-    LeftIcon,
-    RightIcon,
-    loading = false,
-    ...props
-  }: ButtonProps) => {
-    if (loading) {
-      return (
-        <SkeletonButton
-          size={size}
-          label={
-            <WithIcons
-              LeftIcon={LeftIcon}
-              RightIcon={RightIcon}
-              children={children}
-            />
-          }
-        />
-      );
-    }
+export const Button = ({
+  children,
+  size = 'md',
+  variant = 'solid',
+  className,
+  ...props
+}: ButtonProps) => {
+  const variantConfig = {
+    plain: 'text-primary-500 hover:bg-primary-50 active:bg-primary-100',
+    solid:
+      'text-neutral-100 bg-primary-500 hover:bg-primary-600 active:bg-primary-700',
+    outlined:
+      'ring-1 ring-primary-500 ring-inset text-primary-500 hover:bg-primary-50 active:bg-primary-100',
+    soft: 'text-primary-800 bg-primary-200 hover:bg-primary-300 active:text-primary-900 active:bg-primary-400',
+  };
 
-    return (
-      <button
-        className={cn(
-          'rounded-lg border focus:ring focus:ring-secondary-300',
-          className,
-          {
-            'bg-secondary-500 border-secondary-500 text-secondary-text hover:bg-secondary-600 active:bg-secondary-500':
-              variant === 'primary',
-            'text-secondary-500 border border-secondary-500 hover:bg-secondary-500 hover:text-secondary-text':
-              variant === 'secondary',
-            'border-none text-slate-600 active:text-slate-500 hover:underline':
-              variant === 'tetiary',
-          },
-          {
-            'px-2 py-1 text-sm': size === 'small',
-            'px-3 py-2': size === 'base',
-          }
-        )}
-        {...props}
-      >
-        <WithIcons
-          LeftIcon={LeftIcon}
-          RightIcon={RightIcon}
-          children={children}
-          iconSize={size}
-        />
-      </button>
-    );
-  }
-);
+  const sizeConfig = {
+    md: 'px-4 py-2 rounded-lg',
+    sm: 'px-2 py-1 rounded-md text-sm',
+  };
+
+  return (
+    <button
+      className={cn(
+        'font-medium',
+        className,
+        sizeConfig[size],
+        variantConfig[variant]
+      )}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};

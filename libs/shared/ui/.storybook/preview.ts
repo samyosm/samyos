@@ -6,7 +6,7 @@ const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on.*' },
     controls: {
-      exclude: ['className', 'LeftIcon', 'RightIcon'],
+      exclude: ['LeadingIcon', 'TrailingIcon', 'className'],
     },
   },
 };

@@ -5,14 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          ...colors.yellow,
-          text: colors.white,
-        },
-        secondary: {
-          ...colors.indigo,
-          text: colors.white,
-        },
+        primary: colors.indigo,
+        neutral: colors.slate,
+        success: colors.emerald,
+        danger: colors.red,
+        other: colors.blue,
       },
     },
   },
