@@ -1,3 +1,4 @@
+import { Header, Text } from '@samyos/shared/ui';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 
@@ -23,9 +24,31 @@ export default function Layout({
     notFound();
   }
 
+  const items = [
+    {
+      label: 'Home',
+      locale: 'en',
+      href: '/',
+    },
+    {
+      label: 'Watch',
+      locale: 'en',
+      href: '/watch',
+    },
+    {
+      label: 'Learn',
+      locale: 'en',
+      href: '/learn',
+    },
+  ];
+  const Logo = <Text level="organism">SamyOs</Text>;
+
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang={locale} className="h-screen">
+      <body className="h-screen flex flex-col">
+        <Header logo={Logo} items={items} />
+        <main className="h-full">{children}</main>
+      </body>
     </html>
   );
 }

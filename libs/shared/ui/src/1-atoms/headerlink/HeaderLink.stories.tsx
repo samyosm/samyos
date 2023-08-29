@@ -7,7 +7,6 @@ export default {
   args: {
     href: '/',
     label: 'Label',
-    active: false,
     locale: 'en'
   },
   decorators: [

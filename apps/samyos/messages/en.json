@@ -1,6 +1,6 @@
 {
   "Index": {
-    "title": "Hello, {name}!",
+    "title": "Open Source!",
     "birth": "It's your {year, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} birthday!",
     "cta": "Start your project"
   }

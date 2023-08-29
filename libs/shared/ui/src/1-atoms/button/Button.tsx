@@ -1,4 +1,5 @@
 import cn from 'clsx';
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'md' | 'sm';

@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react';
 import { Header } from './Header';
-import { Text } from '../../atoms/text/Text';
+import { Text } from '../../1-atoms/text/Text';
 
 export default {
   component: Header,
@@ -24,6 +24,7 @@ export default {
       }
     ],
     logo: <Text level='organism'>SamyOs</Text>
+
   }
 } satisfies Meta<typeof Header>;
 

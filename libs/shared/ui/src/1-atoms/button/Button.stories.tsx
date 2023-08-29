@@ -11,6 +11,7 @@ export default {
     size: 'md',
     variant: 'soft',
     children: <Text TrailingIcon={Icon}>Hello, world!</Text>,
+
   }
 } satisfies Meta<typeof Button>;
 

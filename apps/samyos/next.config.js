@@ -21,6 +21,8 @@ const nextConfig = {
 const plugins = [
   // Add more Next.js plugins to this list if needed.
   withNx,
+  withNextIntl,
 ];
 
-module.exports = withNextIntl(composePlugins(...plugins)(nextConfig));
+// @ts-ignore
+module.exports = composePlugins(...plugins)(nextConfig);
