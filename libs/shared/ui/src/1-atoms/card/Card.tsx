@@ -10,7 +10,7 @@ export const Card = ({ title, children }: CardProps) => {
   return (
     <div
       className={cn(
-        'flex flex-col gap-1 bg-white rounded-md ring-1 ring-inset ring-neutral-200 p-5 shadow-lg'
+        'flex flex-col gap-1 bg-white rounded-xl ring-1 ring-inset ring-neutral-200 p-5 shadow-lg'
       )}
     >
       <Text level="organism">{title}</Text>

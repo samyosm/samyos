@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from 'next-intl/client';
 import { HyperLink } from '../hyperlink';
 
 export interface HeaderLinkProps {
@@ -14,7 +14,11 @@ export const HeaderLink = ({ label, href, locale }: HeaderLinkProps) => {
   const active = pathname.endsWith(href);
   return (
     <li>
-      <HyperLink href={href} variant={active ? 'solid' : 'unemphasized'}>
+      <HyperLink
+        locale={locale}
+        href={href}
+        variant={active ? 'solid' : 'unemphasized'}
+      >
         {label}
       </HyperLink>
     </li>

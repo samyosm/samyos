@@ -12,11 +12,12 @@ export interface HyperLinkProps {
 
   /** _blank is preferable */
   target?: '_self' | '_blank';
+  locale?: string;
 }
 
 /** An anchor link (`<a>`).*/
 export const HyperLink = memo(
-  ({ variant = 'solid', children, href, target }: HyperLinkProps) => {
+  ({ variant = 'solid', children, href, target, locale }: HyperLinkProps) => {
     const variantStyle = {
       solid:
         'bg-primary-400 underline hover:bg-primary-500 active:bg-primary-400 text-neutral-100 px-3',
@@ -25,7 +26,7 @@ export const HyperLink = memo(
     };
 
     return (
-      <Link href={href}>
+      <Link locale={locale} href={href}>
         <div className={cn('rounded-lg py-1 w-fit', variantStyle[variant])}>
           <Text LeadingIcon={target === '_blank' ? OutsideIcon : undefined}>
             {children}

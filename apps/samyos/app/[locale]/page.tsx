@@ -1,44 +1,73 @@
-import { Button, Text } from '@samyos/shared/ui';
+import { Button, Card, Jumbotron, Pedestral, Space, Text } from '@samyos/shared/ui';
 import { LocaleParams } from './layout';
 import { getTranslator } from 'next-intl/server';
+import {
+  IoMdSearch as SearchIcon,
+  IoMdLock as LockIcon,
+  IoMdGitNetwork as ForkIcon
+}
+  from 'react-icons/io';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
+  const t = await getTranslator(params.locale, 'Index');
+
+  return {
+    title: t('page.title'),
+  };
+};
 
 export default async function Index({ params }: { params: LocaleParams }) {
   const t = await getTranslator(params.locale, 'Index');
-  const tags = [
-    'GPLv3',
-    'free',
-    'open-source',
-    'OSI',
-    'GNU',
-    'Linux',
-    'collaboration',
-    'software',
-    'GitHub',
-  ];
+
   return (
-    <div className="flex flex-col p-20 gap-2 h-full">
-      <div className="flex justify-between w-full max-w-7xl mx-auto">
-        <div className="flex flex-col gap-5 w-full max-w-md">
-          <Text level="page" size="lg">
-            {t('title')}
-          </Text>
+    <div className="w-full">
+      <Space size='xl' className='bg-primary-50'>
+        <Jumbotron
+          title=<Text level='page' size='lg'>{t('hero.title')}</Text>
+          description={t('hero.description')}
+        >
+          <Button className='w-fit'>{t('hero.cta')}</Button>
+        </Jumbotron>
+      </Space>
 
-          <Text level="atom" size="md">
-            Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-            reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
-            ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-          </Text>
 
-          <Button variant="solid" className="w-fit">
-            Participate
-          </Button>
+      <Space size='xl' className='bg-white'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          <Pedestral
+            Symbol={SearchIcon}
+            title={t('pedestals.secure.title')}
+            description={t('pedestals.secure.description')} />
+
+          <Pedestral
+            Symbol={LockIcon}
+            title={t('pedestals.transparent.title')}
+            description={t('pedestals.transparent.description')} />
+
+          <Pedestral
+            Symbol={ForkIcon}
+            title={t('pedestals.active.title')}
+            description={t('pedestals.active.description')} />
         </div>
-        <div className="grid grid-cols-3">
-          {tags.map((t) => (
-            <p>{t}</p>
-          ))}
+      </Space>
+
+      <Space size='xl' className='bg-primary-50'>
+        <div>
+          <Text level='page' size='md'>{t('freedoms.title')}</Text>
+          <Text level='atom' size='md'>{t('freedoms.subtitle')}</Text>
         </div>
-      </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
+          <Card title={t('freedoms.freedom0.title')}>{t('freedoms.freedom0.definition')}</Card>
+          <Card title={t('freedoms.freedom1.title')}>{t('freedoms.freedom1.definition')}</Card>
+          <Card title={t('freedoms.freedom2.title')}>{t('freedoms.freedom2.definition')}</Card>
+          <Card title={t('freedoms.freedom3.title')}>{t('freedoms.freedom3.definition')}</Card>
+        </div>
+      </Space>
+
     </div>
   );
 }

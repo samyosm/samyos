@@ -7,7 +7,7 @@ export interface JumbotronProps {
 
 export const Jumbotron = ({ title, description, children }: JumbotronProps) => {
   return (
-    <div className={cn('flex flex-col gap-5 w-fit max-w-md')}>
+    <div className={cn('flex flex-col gap-5 w-full')}>
       <span className="max-w-md">{title}</span>
       <span className="max-w-xs">{description}</span>
       {children && children}

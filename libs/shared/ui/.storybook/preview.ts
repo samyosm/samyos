@@ -7,6 +7,9 @@ const preview: Preview = {
     actions: { argTypesRegex: '^on.*' },
     controls: {
       exclude: ['LeadingIcon', 'TrailingIcon', 'className'],
+      matchers: {
+        date: /date$/,
+      },
     },
   },
 };

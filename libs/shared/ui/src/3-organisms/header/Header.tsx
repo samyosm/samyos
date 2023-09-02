@@ -20,9 +20,10 @@ export const Header = ({ logo, children, items }: HeaderProps) => {
 
   return (
     <header
-      className={cn('flex justify-between p-5 sticky top-0', {
-        'shadow-md': !isAtTop,
-      })}
+      className={cn(
+        'flex justify-between p-5 sticky top-0',
+        !isAtTop && 'shadow-sm bg-white/90 backdrop-blur'
+      )}
     >
       {logo}
       <nav>

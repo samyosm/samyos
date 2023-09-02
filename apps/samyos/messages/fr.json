@@ -1,7 +1,70 @@
 {
+  "History": {
+    "title": "Histoire"
+  },
   "Index": {
-    "title": "Open Source",
-    "birth": "C'est votre {year, selectordinal, one {#er} other {#iéme}} anniversaire.",
-    "cta": "Commencer votre project"
+    "page": {
+      "title": "Open Source"
+    },
+    "header": {
+      "nav": {
+        "home": "Accueil",
+        "history": "Histoire",
+        "learn": "Apprendre"
+      }
+    },
+    "hero": {
+      "cta": "Contribue",
+      "title": "Moi, Vous, Nous!",
+      "description": "On prone les logiciels libre à code source ouvert.",
+      "tags": [
+        "Freedom",
+        "Linux",
+        "Software",
+        "Community",
+        "Collaboration",
+        "Git",
+        "GNU",
+        "GPL",
+        "FOSS"
+      ]
+    },
+    "pedestals": {
+      "transparent": {
+        "title": "Transparent",
+        "description": "Les logiciels libres donnent accès au code source du logiciel, ce qui permet aux utilisateurs d'en examiner le fonctionnement. Cette transparence garantit que le logiciel respecte leurs droits en matière de protection de la vie privée, par exemple."
+      },
+      "secure": {
+        "title": "Sécurisé",
+        "description": "Les projets de logiciels libres ont souvent des communautés actives qui sont à l'affût des problèmes de sécurité. Ils sont également prompts à réagir à ces failles de sécurité."
+      },
+      "active": {
+        "title": "Actif",
+        "description": "Les communautés à l'origine des logiciels libres sont à l'écoute des réactions et des problèmes des utilisateurs et sont promptes à trouver des solutions pour les résoudre."
+      }
+    },
+    "freedoms": {
+      "title": "Les quatre libertés essentielles",
+      "subtitle": "Ces libertés ont été définies par le site web gnu.org pour définir le logiciel libre.",
+      "freedom0": {
+        "title": "Liberté 0",
+        "definition": "La liberté de faire fonctionner le programme comme vous voulez, pour n'importe quel usage."
+      },
+      "freedom1": {
+        "title": "Liberté 1",
+        "definition": "La liberté d'étudier le fonctionnement du programme, et de le modifier pour qu'il effectue vos tâches informatiques comme vous le souhaitez."
+      },
+      "freedom2": {
+        "title": "Liberté 2",
+        "definition": "La liberté de redistribuer des copies, donc d'aider les autres."
+      },
+      "freedom3": {
+        "title": "Liberté 3",
+        "definition": "La liberté de distribuer aux autres des copies de vos versions modifiées."
+      }
+    }
+  },
+  "header": {
+    "cta": "Contribute"
   }
 }
