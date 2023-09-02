@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Timeline } from './Timeline';
 import { TimeEvent } from './TimeEvent';
 import { IoMdCompass as Icon } from 'react-icons/io';
-import { Button } from '../../1-atoms';
+import { Button } from '../../atoms';
 
 const Timespans = () => (
   <>

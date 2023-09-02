@@ -1,5 +1,5 @@
 import datejs from 'dayjs';
-import { Text } from '../../1-atoms';
+import { Text } from '../../atoms';
 import { IconBaseProps } from 'react-icons';
 
 export interface TimeEventProps {

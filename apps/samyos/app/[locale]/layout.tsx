@@ -1,9 +1,12 @@
 import { Header, Text } from '@samyos/shared/ui';
+import { Metadata } from 'next';
 import { useLocale } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-export const metadata = {
+export const runtime = 'edge';
+
+export const metadata: Metadata = {
   title: {
     template: '%s | SamyOs',
     default: 'Open Source | SamyOs',

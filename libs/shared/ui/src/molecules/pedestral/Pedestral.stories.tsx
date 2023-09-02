@@ -1,7 +1,7 @@
 import type { Meta } from '@storybook/react';
 import { Pedestral } from './Pedestral';
 import { IoMdCompass as Symbol } from 'react-icons/io';
-import { Button } from '../../1-atoms/button';
+import { Button } from '../../atoms/button';
 
 export default {
   component: Pedestral,

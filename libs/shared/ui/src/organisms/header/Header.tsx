@@ -1,7 +1,7 @@
 'use client';
 
 import cn from 'clsx';
-import { HeaderLink } from '../../1-atoms';
+import { HeaderLink } from '../../atoms';
 import { useTop } from '../../hooks/useTop';
 export interface HeaderProps {
   logo: React.ReactNode;

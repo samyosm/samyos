@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react';
 import { Jumbotron } from './Jumbotron';
-import { Button, Text } from '../../1-atoms';
+import { Button, Text } from '../../atoms';
 
 export default {
   component: Jumbotron,

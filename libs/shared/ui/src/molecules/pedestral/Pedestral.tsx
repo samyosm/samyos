@@ -1,5 +1,5 @@
 import cn from 'clsx';
-import { Text } from '../../1-atoms/text';
+import { Text } from '../../atoms/text';
 import { IconBaseProps } from 'react-icons';
 
 export interface PedestralProps {
