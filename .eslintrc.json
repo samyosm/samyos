@@ -3,9 +3,19 @@
   "ignorePatterns": [
     "**/*"
   ],
+  "extends": [
+    "google",
+    "eslint:recommended"
+  ],
   "plugins": [
     "@nx"
   ],
+  "rules": {
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ]
+  },
   "overrides": [
     {
       "files": [
@@ -15,11 +25,20 @@
         "*.jsx"
       ],
       "rules": {
+        "require-jsdoc": "off",
+        "import/no-extraneous-dependencies": [
+          "off"
+        ],
+        "no-trailing-spaces": [
+          "error"
+        ],
         "@nx/enforce-module-boundaries": [
-          "info",
+          "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": [],
+            "allow": [
+              "@samyos/oss/contentlayer"
+            ],
             "depConstraints": [
               {
                 "sourceTag": "*",
@@ -50,18 +69,6 @@
       "extends": [
         "plugin:@nx/javascript"
       ],
-      "rules": {}
-    },
-    {
-      "files": [
-        "*.spec.ts",
-        "*.spec.tsx",
-        "*.spec.js",
-        "*.spec.jsx"
-      ],
-      "env": {
-        "jest": true
-      },
       "rules": {}
     }
   ]

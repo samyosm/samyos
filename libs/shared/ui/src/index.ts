@@ -1,3 +1,2 @@
-export * from './molecules';
-export * from './organisms';
-export * from './atoms';
+'use client';
+export * from './lib/header/header';
