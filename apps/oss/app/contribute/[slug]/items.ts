@@ -1,3 +1,7 @@
-import { allContributes } from '@samyos/oss/contentlayer';
+import { allOsses } from 'contentlayer/generated';
 
-export const items = allContributes.map((t) => t.title);
+export const allContributes = allOsses.filter(
+  (t) => t.class.name === 'contribute'
+);
+
+export const items = allContributes.map((t) => t.core.title);

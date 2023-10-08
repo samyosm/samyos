@@ -1,11 +1,12 @@
 ---
-title: "OBS Tool Review"
-description: "OBS Tool Review"
-license: "GPLv2"
-link: "https://obsproject.com/"
+core:
+  title: 'OBS Tool Review'
+  description: 'OBS Tool Review'
+  datePublished: 2023-10-07
+  dateModified: 2023-10-07
+license: 'GPLv2'
+link: 'https://obsproject.com/'
 rating: 5
-datePublished: 2023-10-07
-dateModified: 2023-10-07
 ---
 
 # OBS Tool Review

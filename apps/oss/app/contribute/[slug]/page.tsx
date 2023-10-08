@@ -1,7 +1,6 @@
 import { notFound, permanentRedirect } from 'next/navigation';
-import { allContributes } from '@samyos/oss/contentlayer';
 import { NextButton, PrevButton } from './buttons';
-import { items } from './items';
+import { allContributes, items } from './items';
 import { Stepper } from '../../../components/stepper/Stepper';
 import { Article } from '@samyos/shared/ui/server';
 
@@ -19,7 +18,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
     return notFound();
   }
 
-  return { title: post.title };
+  return { title: post.core.title };
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -50,11 +49,11 @@ export default function Page({ params }: { params: { slug: string } }) {
 
         <div className="flex flex-col gap-16">
           <Article
-            headline={post.title}
-            description={post.description ?? ''}
+            headline={post.core.title}
+            description={post.core.description ?? ''}
             author={'Samy Rahmani'}
-            dateModified={new Date(post.datePublished)}
-            datePublished={new Date(post.datePublished)}
+            dateModified={new Date(post.core.datePublished)}
+            datePublished={new Date(post.core.datePublished)}
             image={''}
             body={post.body.html}
           />

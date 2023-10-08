@@ -1,8 +1,9 @@
 ---
-title: Privacy Policy
-description: Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
-datePublished: 2023-10-07
-dateModified: 2023-10-07
+core:
+  title: Privacy Policy
+  description: Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+  datePublished: 2023-10-07
+  dateModified: 2023-10-07
 ---
 
 # Privacy Policy

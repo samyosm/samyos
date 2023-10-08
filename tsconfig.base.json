@@ -18,7 +18,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@samyos/oss/contentlayer": [
+      "contentlayer/generated": [
         ".contentlayer/generated"
       ],
       "@samyos/shared/ui": [
@@ -29,6 +29,9 @@
       ]
     }
   },
+  "include": [
+    ".contentlayer/generated"
+  ],
   "exclude": [
     "node_modules",
     "tmp"

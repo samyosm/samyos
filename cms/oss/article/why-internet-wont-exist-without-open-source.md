@@ -1,8 +1,9 @@
 ---
-title: "The Evolution of Open Source: From Sharing Engines to Building the Internet"
-description: "Discover the remarkable journey of open source, from sharing engine technology to shaping the very foundation of the internet. Explore the pivotal eras of collaboration that have made today's digital world possible."
-datePublished: 2023-10-07
-dateModified: 2023-10-07
+core:
+  title: 'The Evolution of Open Source: From Sharing Engines to Building the Internet'
+  description: "Discover the remarkable journey of open source, from sharing engine technology to shaping the very foundation of the internet. Explore the pivotal eras of collaboration that have made today's digital world possible."
+  datePublished: 2023-10-07
+  dateModified: 2023-10-07
 ---
 
 # The Evolution of Open Source: From Sharing Engines to Building the Internet

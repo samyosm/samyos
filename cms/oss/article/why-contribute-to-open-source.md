@@ -1,8 +1,9 @@
 ---
-title: 7 Compelling Reasons to Start Contributing to Open Source Projects
-description: Discover how contributing to open source projects can turbocharge your coding skills, connect you with a vibrant community, and empower you to shape the future of software. Explore the seven compelling reasons in this article to ignite your passion for open source development.
-datePublished: 2023-10-07
-dateModified: 2023-10-07
+core:
+  title: 7 Compelling Reasons to Start Contributing to Open Source Projects
+  description: Discover how contributing to open source projects can turbocharge your coding skills, connect you with a vibrant community, and empower you to shape the future of software. Explore the seven compelling reasons in this article to ignite your passion for open source development.
+  datePublished: 2023-10-07
+  dateModified: 2023-10-07
 ---
 
 # 7 Compelling Reasons to Start Contributing to Open Source Projects
