@@ -10,30 +10,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "contentlayer/generated": [
-        ".contentlayer/generated"
-      ],
-      "@samyos/shared/ui": [
-        "libs/shared/ui/src/index.ts"
-      ],
-      "@samyos/shared/ui/server": [
-        "libs/shared/ui/src/server.ts"
-      ]
+      "@samyos/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@samyos/shared/ui/server": ["libs/shared/ui/src/server.ts"],
+      "contentlayer/generated": [".contentlayer/generated"]
     }
   },
-  "include": [
-    ".contentlayer/generated"
-  ],
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "include": [".contentlayer/generated"],
+  "exclude": ["node_modules", "tmp"]
 }

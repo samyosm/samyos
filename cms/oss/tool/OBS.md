@@ -1,9 +1,12 @@
 ---
 core:
   title: 'OBS Tool Review'
-  description: 'OBS Tool Review'
+  description: 'OBS stand for Open Broadcaster Software. It started as a hobby project for Lain Bailey, but it quickly grew and matured thanks to the open source community that worked to improve the program.'
   datePublished: 2023-10-07
   dateModified: 2023-10-07
+  image:
+    src: "obs.jpg"
+    alt: "OBS Studio"
 license: 'GPLv2'
 link: 'https://obsproject.com/'
 rating: 5

@@ -4,6 +4,9 @@ core:
   description: Linus Benedict Torvalds is born on the 28th of December 1969 in Helsinki, Finland to a educated and wealthy family of journalists. This means he grows up in tech-savvy environment that sparks his interest in computers. At this point in time, he has no idea this interest in technology would change the tech world for ever.
   datePublished: 2023-10-07
   dateModified: 2023-10-07
+  image:
+    src: "Linus-Torvalds.jpg"
+    alt: "Linus Torvalds"
 ---
 
 # The Legend of Linus Torvalds (Linux Creator)

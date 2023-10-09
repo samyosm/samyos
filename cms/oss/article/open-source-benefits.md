@@ -4,6 +4,9 @@ core:
   description: 'Discover the Power of Open Source: Unveiling its Benefits - From enhanced security and transparency to cost-effective solutions and boundless customization, open source software revolutionizes the tech world. Explore the advantages that have captivated long-time developers and coding enthusiasts.'
   datePublished: 2023-10-07
   dateModified: 2023-10-07
+  image:
+    src: "code1.jpg"
+    alt: "A women coding"
 ---
 
 # Top 5 Benefits of Open Source Programming

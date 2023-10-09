@@ -28,8 +28,7 @@
     "**/*.jsx",
     "../../apps/oss/.next/types/**/*.ts",
     "../../dist/apps/oss/.next/types/**/*.ts",
-    "next-env.d.ts",
-    ".contentlayer/generated"
+    "next-env.d.ts"
   ],
   "exclude": [
     "node_modules",
