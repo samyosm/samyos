@@ -4,6 +4,9 @@ core:
   description: "Discover the remarkable journey of open source, from sharing engine technology to shaping the very foundation of the internet. Explore the pivotal eras of collaboration that have made today's digital world possible."
   datePublished: 2023-10-07
   dateModified: 2023-10-07
+  image:
+    src: "no-wifi.jpg"
+    alt: "Google page showing no internet"
 ---
 
 # The Evolution of Open Source: From Sharing Engines to Building the Internet
