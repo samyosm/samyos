@@ -1,6 +1,6 @@
-import { DocumentTypes } from 'contentlayer/generated';
+import {DocumentTypes} from 'contentlayer/generated';
 import Link from 'next/link';
-import { format, parseISO } from 'date-fns';
+import {format, parseISO} from 'date-fns';
 import Image from 'next/image';
 import cn from 'clsx';
 
@@ -8,10 +8,11 @@ export interface ArticleCardProps {
   post: DocumentTypes;
 }
 
-export async function ArticleCard({ post }: ArticleCardProps) {
+export async function ArticleCard({post}: ArticleCardProps) {
   const image = (
     await import(/* webpackMode: "eager" */ `cms/assets/${post.core.image.src}`)
   ).default;
+
   return (
     <Link
       href={post.url}
@@ -48,6 +49,7 @@ export async function ArticleCard({ post }: ArticleCardProps) {
           src={image}
           alt={post.core.image.alt ?? post.core.title}
         />
+
       </div>
     </Link>
   );
