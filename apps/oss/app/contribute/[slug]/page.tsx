@@ -54,7 +54,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             author={'Samy Rahmani'}
             dateModified={new Date(post.core.datePublished)}
             datePublished={new Date(post.core.datePublished)}
-            image={''}
+            image={post.core.image}
             body={post.body.html}
           />
 
